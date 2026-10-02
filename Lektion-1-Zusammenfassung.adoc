@@ -1,0 +1,174 @@
+= Lektion 1 – Einführung und Historie: Zusammenfassung
+Modul 63517 – Informations- und Kodierungstheorie (FernUniversität in Hagen)
+:toc:
+:toclevels: 2
+:sectnums:
+:source-highlighter: none
+
+[NOTE]
+====
+Diese Zusammenfassung fasst Kapitel 1 des Basistexts (Dirk W. Hoffmann, _Einführung in die Informations- und Codierungstheorie_, Springer Vieweg) zusammen, wie es dem Leittext der Lektion 1 zugeordnet ist. Sie orientiert sich an den im Leittext genannten *Lernzielen*:
+
+* die Geschichte der Nachrichtentechnik in Kurzform kennenzulernen, und
+* die Bedeutung der Informations- und Kodierungstheorie zu verstehen.
+
+Das Kapitel selbst nennt als drittes, verbindendes Ziel, den Wandel einer ehemaligen Ingenieurdisziplin zu einer Wissenschaft nachzuvollziehen – dieser rote Faden zieht sich durch die gesamte Zusammenfassung und mündet in Abschnitt <<sec-shannon,1.7>>.
+====
+
+== Einleitung
+
+Nachrichten wurden schon immer übertragen – doch erst die massenhafte Übertragung über große Entfernungen, ohne auf Träger wie Papier zurückzugreifen, zwang dazu, sich systematisch Gedanken über eine sinnvolle Kodierung von Information und über die Grenzen der Leistungsfähigkeit solcher Kodierungen zu machen. Kapitel 1 zeichnet diese Entwicklung nach: von den ersten optischen Signalfeuern der Antike über die mechanische und elektrische Telegrafie, die Telefonie und die drahtlose Kommunikation bis hin zur Elektronik des 20. Jahrhunderts – und mündet schließlich in Claude Shannons Begründung der Informationstheorie im Jahr 1948, mit der aus einer Ingenieurdisziplin eine mathematische Wissenschaft wurde.
+
+=== Von Fackeln und Feuern der Antike
+
+Die ältesten belegten Formen der Nachrichtenübertragung über Distanz beruhen auf Licht- und Feuerzeichen.
+
+Fackelpost des Agamemnon:: Im Drama _Agamemnon_ des Aischylos (Erstaufführung 458 v. Chr.) wird beschrieben, wie die Nachricht vom Fall Trojas über eine Kette von acht Signalfeuern (u. a. Ida, Lemnos, Athos, Makistos, Messapios, Kithairon, Aigiplanktos, Arachnaion) nach Argos übermittelt wird. Historisch ist zweifelhaft, ob eine solche Übertragung mit der Technik der Zeit tatsächlich über 177 km sichtbar gewesen wäre – vermutlich handelt es sich um dramaturgische Zuspitzung. Dennoch ist die Schilderung von Bedeutung, weil sie belegt, dass das Prinzip der *Fackelpost* bereits den Griechen bekannt war. Die Fackelpost war die primitivste Form optischer Nachrichtenübertragung: Sie war schnell (Stunden statt Tage), aber unflexibel – sie konnte nur ein einziges, vorher vereinbartes Ereignis signalisieren, keine beliebigen Nachrichten.
+Synchrontelegraf des Aineias:: Der griechische Militärstratege Aineias Taktikos schlug im 4. Jh. v. Chr. eine Apparatur vor, mit der differenzierte Nachrichten übertragen werden konnten – überliefert durch den Geschichtsschreiber Polybios. Zwei identische, mit Wasser gefüllte Tongefäße mit synchron ablaufendem Auslauf und eingraviertem Nachrichtenstab wurden auf ein Startsignal hin gleichzeitig geöffnet; ein zweites Lichtsignal stoppte den Ausfluss, und der eingesunkene Nachrichtenstab zeigte die übertragene Botschaft an. Damit war zum ersten Mal die Übertragung *vorher nicht festgelegter* Nachrichten denkbar – praktisch verwendet wurde die Konstruktion aber vermutlich nie.
+Fackelcode des Polybios:: Polybios löste das Grundproblem der Fackelpost – die Beschränkung auf wenige feste Botschaften – durch einen echten *Zeichencode*: Buchstaben wurden über eine 5×5-Tafel durch die Kombination von "Spalten-" und "Zeilenfackeln" kodiert und über zwei Fackelgruppen (je bis zu 5 Fackeln) übertragen. Damit schuf Polybios den ersten Zeichencode der Nachrichtentechnik überhaupt. Praktisch blieb der Nutzen begrenzt, da das Fernrohr noch nicht erfunden war und die Reichweite der Fackelsignale ohne optische Hilfsmittel gering blieb.
+
+TIP: Für Lernziel 1 zeigt Abschnitt 1.1 bereits das Grundmuster, das sich durch die gesamte Geschichte zieht: Übertragungsreichweite, Übertragungsgeschwindigkeit und die Frage, wie viele unterschiedliche Nachrichten kodiert werden können, stehen von Anfang an in Konkurrenz zueinander.
+
+=== Das mechanische Internet
+
+Erst mit der Französischen Revolution entstand der politische und militärische Bedarf für ein landesweites, differenziertes Nachrichtennetz.
+
+Semaphoren-Telegraf von Claude Chappe:: Claude Chappe (1763–1805) stellte 1792 der Nationalversammlung sein Konzept eines optischen Telegrafen (_Tachygraphe_, später _Télégraphe_) vor. Eine Station bestand aus einem Mast mit einem drehbaren Querbalken (_Regulator_, 4 Stellungen) und zwei weiteren Balken an dessen Enden (_Indikatoren_, je 7 Stellungen) – theoretisch 4·7·7 = 196 unterscheidbare Figuren. 1794 wurde die erste Strecke Paris–Lille (Relaisstationen im Sichtabstand) in Betrieb genommen; die erste bedeutende Nachricht (Rückeroberung von Le Quesnoy) erreichte Paris in Rekordzeit. Bis 1845 überzog ein dichtes Netz aus Chappe-Telegrafenlinien weite Teile Europas und verband u. a. Paris, Amsterdam, Turin, Mailand und Venedig – ein "mechanisches Internet". Chappe selbst nahm sich 1805, zermürbt von Anfeindungen und Plagiatsvorwürfen, im Alter von 41 Jahren das Leben.
+Klappentelegrafen:: Parallel entwickelten britische Ingenieure sogenannte _Shutter-Telegrafen_, bei denen Klappen einzeln sichtbar oder verborgen geschaltet wurden – im Gegensatz zu Chappes geometrischen Figuren bereits ein *binäres* Kodierprinzip. John Gamble entwarf zunächst einen Fünf-Klappen-Telegrafen (32 Kombinationen), später einen kompakteren Vier-Klappen-Telegrafen (16 Kombinationen, kombiniert mit phonetischer Zusammenlegung ähnlich klingender Buchstaben zu einem praktikablen Code). Für die Linie London–Deal setzte man sich jedoch für den Sechs-Klappen-Telegrafen nach Lord George Murrays Entwurf ein, der sich in der Praxis bewährte (London–Portsmouth 1805, später erweitert). Nach dem Frieden von 1814 wurden die britischen Telegrafenlinien als militärisch bedeutungslos erachtet und verfielen.
+
+=== Elektrische Nachrichtenübertragung
+
+Die optische Telegrafie war auf Sichtverbindungen und Tageslicht angewiesen. Erst die Nutzbarmachung der Elektrizität – ermöglicht durch Alessandro Voltas Erfindung der _Volta'schen Säule_ (1800), dem Vorläufer der Batterie – eröffnete den Weg zu einem rund um die Uhr verfügbaren, witterungsunabhängigen Kommunikationsnetz.
+
+==== Vorgeschichte: Soemmerring-Telegraf
+
+Samuel Thomas von Soemmerring demonstrierte 1809 einen elektrochemischen Telegrafen: Für jeden Buchstaben bzw. jede Ziffer eine eigene Leitung, deren Stromfluss auf der Empfängerseite Bläschen in einem Wasserbad (Elektrolyse) erzeugte. Die Konstruktion war technisch trickreich, aber unpraktisch (35 Leitungen, langsame Elektrolyse als einziges Anzeigeprinzip, da die Glühlampe noch nicht erfunden war).
+
+==== Nadeltelegrafen
+
+Carl Friedrich Gauß und Wilhelm Eduard Weber bauten 1833 in Göttingen den ersten *elektromagnetischen* Telegrafen: Ein Magnetstab in einer Spule erzeugte bei Bewegung einen Stromimpuls, der über ein rund 1,2 km langes Kabel einen Spiegel am Empfänger auslenkte. Gauß und Weber ersannen dafür einen eigenen binären Code (Kombinationen aus Links-/Rechtsausschlägen). Da beide kein kommerzielles Interesse verfolgten, blieb die Erfindung ohne praktische Fortsetzung. Paul Ludwig Schilling von Cannstatt entwickelte darauf aufbauend Prototypen eines Fünf-Nadel-Telegrafen, konnte seine Pläne aber wegen seines frühen Todes (1837) nicht mehr umsetzen. Sein Werk beeinflusste jedoch William Fothergill Cooke, der – gemeinsam mit dem Physiker Charles Wheatstone, der die nötige fachliche Expertise beisteuerte – 1837 einen praxistauglichen Fünf-Nadel-Telegrafen zum Patent anmeldete. 1839 ging die erste kommerzielle Linie (Paddington–West Drayton, Great Western Railway, 21 km) in Betrieb.
+
+==== Der Morse-Telegraf
+
+Samuel F. B. Morse, eigentlich Kunstprofessor, entwickelte die Idee eines elektrischen Telegrafen 1832 während einer Schiffsreise. Seine frühen Prototypen (ab 1835) waren unausgereift und funktionierten nur über kurze Leitungslängen von wenigen Metern – ein Problem, das erst der Chemieprofessor Leonard Gale löste, indem er auf Basis der Erkenntnisse von Joseph Henry Spannung und Elektromagnet verbesserte. Entscheidend für den kommerziellen Erfolg war die Partnerschaft mit dem Ingenieur Alfred Vail ab 1837: Vail vereinfachte die Sendeeinrichtung, entwickelte vermutlich den eigentlichen *Morse-Code* (Punkte und Striche unterschiedlicher Länge) und finanzierte die Weiterentwicklung maßgeblich – öffentlich zugeschrieben wurde der Erfolg jedoch fast ausschließlich Morse.
+
+1843 bewilligte der US-Kongress 30.000 $ für die Telegrafenlinie Washington–Baltimore, die am 24. Mai 1844 mit dem berühmten Bibelzitat "What hath God wrought!" eröffnet wurde. Damit begann der kommerzielle Siegeszug der Telegrafie: 1850 konkurrierten bereits 20 Firmen um Baugenehmigungen, 1861 war die erste transkontinentale US-Linie fertig, und die _Western Union Telegraph Company_ wuchs zum dominierenden Netzbetreiber heran. Zwei Varianten des Morse-Codes etablierten sich: der ältere *amerikanische* Morse-Code und der 1851 in Berlin festgelegte *internationale* (kontinentale) Morse-Code, der außerhalb der USA zum Standard wurde.
+
+=== Mission Transatlantik
+
+Die letzte große Lücke des Telegrafennetzes war die Verbindung zwischen den Kontinenten. Der amerikanische Geschäftsmann Cyrus West Field nahm sich dieser Aufgabe ab 1854 an. Grundlage war zum einen die Entdeckung eines relativ flachen "Telegrafenplateaus" zwischen Neufundland und Irland (Tiefenmessungen von Matthew F. Maury), zum anderen das neu verfügbare Isoliermaterial *Guttapercha*, das die nötigen Eigenschaften (Isolationsfähigkeit, Haltbarkeit im Salzwasser) für ein Unterseekabel mitbrachte.
+
+Mehrere Versuche scheiterten: 1857 riss das Kabel nach 330 Seemeilen; das 1858 erfolgreich verlegte Kabel gab nach kurzer Zeit auf, nachdem ein Ingenieur die Spannung fälschlich erhöht hatte, um die Empfangsqualität zu verbessern – die Presse sprach spöttisch von der "Great Atlantic Bubble". Erst 1866 gelang mit dem Schiff _Great Eastern_ die dauerhaft funktionsfähige Verlegung, zusätzlich konnte das verlorene Kabel von 1865 geborgen und ergänzt werden, sodass ab September 1866 zwei funktionstüchtige Leitungen bestanden. Mit der Verlegung des ersten transatlantischen Unterseekabels legte Field den Grundstein für die globale Vernetzung der Welt – ein Prinzip, das bis heute (mit Glasfaserkabeln statt Kupferleitern) fortbesteht.
+
+[[sec-telefonie]]
+=== Von der Telegrafie zur Telefonie
+
+==== Suche nach dem harmonischen Telegrafen
+
+Ab den 1870er-Jahren suchten Ingenieure nach Wegen, mehrere Morse-Signale gleichzeitig über eine Leitung zu übertragen (_harmonischer Telegraf_, Frequenzmultiplex mittels Stimmgabeln). Bei diesen Versuchen wurde – unabhängig voneinander und nahezu zeitgleich – die elektrische Übertragung von *Sprache* entdeckt:
+
+* *Alexander Graham Bell* (unterstützt von seinem Assistenten Thomas A. Watson) meldete am 14. Februar 1876 als Erster ein Patent an ("Improvement in Telegraphy", Patent Nr. 174.465) und gilt seither offiziell als Erfinder des Telefons. Am 10. März 1876 gelang der Durchbruch mit dem legendären Satz "Mr. Watson, come here; I want you!"
+* *Elisha Gray* reichte am selben Tag ein sehr ähnliches Patent ein – nur zwei Stunden später als Bell. Es entstand die größte Patentschlacht der Technikgeschichte (über 600 Prozesse, 11 Jahre), die am Ende zugunsten Bells entschieden wurde. Bis heute ist unter Historikern umstritten, wem die eigentliche Urheberschaft gebührt.
+* *Antonio Meucci* hatte bereits ab den 1850er-Jahren telefonähnliche Geräte (_Teletrofono_) gebaut, konnte sein Patent aber aus finanziellen Gründen 1874 nicht verlängern. 2002 würdigte das US-Repräsentantenhaus posthum seine Leistung.
+* *Philipp Reis*, ein deutscher Lehrer, konstruierte bereits 1860/61 ein Gerät, das er selbst *Telefon* nannte und mit dem er Töne (nicht aber verständliche Sprache) elektrisch übertragen konnte – eine direkte Weiterentwicklung des Morse-Telegrafen-Prinzips, nicht der Suche nach dem harmonischen Telegrafen entsprungen. Sein berühmter Testsatz war "Das Pferd frisst keinen Gurkensalat". Reis' Apparate dienten Bell später als Anregung.
+
+==== Drahtlos durch den Äther
+
+Die theoretische Grundlage der drahtlosen Kommunikation legte der Physiker *James Clerk Maxwell*, der 1865 die Existenz elektromagnetischer Wellen rein mathematisch postulierte (_Maxwell'sche Gleichungen_). Den experimentellen Nachweis erbrachte *Heinrich Hertz* 1886/1888 in Karlsruhe – er selbst erkannte den praktischen Nutzen seiner Entdeckung für die Nachrichtentechnik allerdings nicht.
+
+Dies erkannte stattdessen der junge Italiener *Guglielmo Marconi*: Ab 1895 gelangen ihm drahtlose Übertragungen über wachsende Distanzen, 1901 die erstmalige drahtlose Überbrückung des Atlantiks. Damit war die drahtlose Telegrafie (v. a. für die Seefahrt) etabliert – Notrufe wurden nun über Funk möglich. Parallel schuf *Lee de Forest* mit dem *Audion* (Vorläufer der Triodenröhre) den ersten praxistauglichen elektronischen Verstärker; die Triode (Diode plus steuerndes Gitter) wurde zum zentralen Bauelement der analogen Elektronik und ermöglichte in den Folgejahren die massenhafte Verbreitung des Radios als erstes elektronisches Massenmedium.
+
+=== Von der Röhre zum Supercomputer
+
+Die Triodenröhre revolutionierte nicht nur die Rundfunktechnik, sondern legte auch den Grundstein für die Computertechnik, da eine geschaltete Gitterelektrode als *digitales Schaltelement* (Strom fließt / fließt nicht) genutzt werden kann. Drei technologische Sprünge prägen diese Entwicklung:
+
+. *Röhrentechnik*: Der ENIAC (1946) gilt als erster funktionsfähiger Universalcomputer der Welt – mit rund 18.000 Vakuumröhren, 30 Tonnen Gewicht und 174 kW Leistungsaufnahme, aber bereits mit einer Taktfrequenz von 100 kHz (Faktor 1000 schneller als elektromechanische Relais).
+. *Transistor*: 1947 gelang William Shockley, John Bardeen und Walter Brattain in den Bell Laboratories die Entwicklung des ersten praxistauglichen Transistors als kompakterer, zuverlässigerer Ersatz für die Röhre.
+. *Integrierter Schaltkreis*: 1958 fand Jack Kilby einen Weg, mehrere Schaltelemente gemeinsam auf einem Stück Silizium zu fertigen (_integrated circuit_, IC) – die Geburtsstunde der Hochintegration. 1968 gründeten u. a. Robert Noyce und Gordon Moore die Firma Intel; 1971 brachte Intel mit dem *4004* den ersten in Serie gefertigten Mikroprozessor auf den Markt.
+
+Gordon Moore beobachtete bereits 1965, dass sich die Anzahl der auf einem Chip integrierbaren Transistoren etwa alle 20 Monate verdoppelt (_Moore'sches Gesetz_) – ein empirischer Trend, der sich über Jahrzehnte bewahrheitete und die exponentielle Leistungssteigerung der Computertechnik bis heute prägt.
+
+[[sec-shannon]]
+=== Informations- und Codierungstheorie
+
+Dieser Abschnitt ist der Schlüssel zum zweiten Lernziel der Lektion – dem Verständnis der Bedeutung der Informations- und Kodierungstheorie.
+
+==== Ausgangslage: zwei unabhängige Entwicklungen
+
+In den 1930er- und 1940er-Jahren liefen zwei technologische Entwicklungen zunächst unabhängig voneinander:
+
+* In der analogen Telefontechnik kämpften Ingenieure gegen das Problem, dass jede Signalverstärkung über lange Leitungen zwangsläufig auch das Rauschen mitverstärkt und damit die Signalqualität kontinuierlich sinkt.
+* Mit der Triodenröhre als Schaltelement etablierte sich parallel die *digitale* Informationsverarbeitung: Statt kontinuierlicher Spannungspegel treten die zwei binären Zustände 0 und 1, verknüpft über die drei logischen Grundoperationen Negation, Konjunktion (UND) und Disjunktion (ODER), aus denen sich jede beliebige digitale Schaltung aufbauen lässt.
+
+Lange ahnte niemand, dass Telefonübertragung und Rechnerprogramme etwas miteinander zu tun haben könnten.
+
+==== Claude Shannon und "A Mathematical Theory of Communication" (1948)
+
+*Claude Elwood Shannon* (1916–2001), Mathematiker und Elektrotechniker, verband beide Welten: In seiner Masterarbeit am MIT (1937) zeigte er, dass sich Hardwareschaltungen durch aussagenlogische Formeln beschreiben lassen (Grundlage der booleschen Schaltkreisoptimierung bis heute). 1941 wechselte er zu den Bell Labs, wo er sich während des Zweiten Weltkriegs intensiv mit Kryptoanalyse beschäftigte.
+
+1948 veröffentlichte Shannon die Arbeit *"A Mathematical Theory of Communication"* – von _Scientific American_ 1990 als "Magna Carta des Informationszeitalters" bezeichnet. Mit dieser einzigen Arbeit begründete Shannon eine völlig neue Forschungsrichtung, die heute als *Informationstheorie* bezeichnet wird. Ihr Kerngedanke: Eine übertragene Nachricht kann *unabhängig von ihrem Übertragungsmedium* betrachtet werden. Nicht das Medium selbst steht im Mittelpunkt, sondern die *Information* – und das Bit ist ihre fundamentale Einheit. Jede Nachricht, ob analog oder digital, lässt sich auf eine Folge von Nullen und Einsen reduzieren.
+
+==== Das Shannon'sche Kommunikationsmodell
+
+Shannon definierte ein allgemeines, fünfteiliges Kommunikationsmodell:
+
+[cols="1,3", options="header"]
+|===
+| Komponente | Funktion
+
+| Informationsquelle (_information source_)
+| wählt eine von mehreren möglichen Nachrichten aus
+
+| Sender (_transmitter_)
+| wandelt die Nachricht in ein Signal um
+
+| Übertragungskanal (_communication channel_)
+| transportiert das Signal, gestört durch eine Störquelle (_noise source_)
+
+| Empfänger (_receiver_)
+| wandelt das (ggf. verfälschte) Signal zurück in eine Nachricht
+
+| Informationssenke (_destination_)
+| Zielort der Nachricht
+|===
+
+Die Stärke dieses Modells liegt in seiner Allgemeingültigkeit: Es passt gleichermaßen auf die Telegrafie (Absender – Morse-Telegraf – Leitung – Morse-Telegraf – Adressat), die Telefonie (Sprachorgan – Telefon – Leitung – Telefon – Ohr) und sogar auf Datenspeicherung (PC – Brenner – Datenträger – Lesegerät – PC, mit Kratzern/Fingerabdrücken als "Störquelle").
+
+==== Shannons zwei Kernfragen
+
+. *Wie viel Information enthält eine Nachricht?* Über den Begriff der *Entropie* einer Datenquelle lässt sich der Informationsgehalt von Nachrichten quantitativ erfassen. Das erlaubt es, die minimal nötige Bitanzahl zur verlustfreien Darstellung einer Nachricht zu berechnen und damit die Güte von Kompressionsalgorithmen objektiv zu beurteilen.
+. *Wie geht man mit gestörten (verrauschten) Kanälen um?* Da praktisch jeder reale Kommunikationskanal Störungen unterliegt, muss stets mit Übertragungsfehlern gerechnet werden. Shannon bewies (u. a. im später so genannten _Kanalcodierungstheorem_, engl. _Noisy-Channel Coding Theorem_), dass es Kodierungen gibt, mit denen sich Übertragungsfehler mit beliebig kleiner Restwahrscheinlichkeit erkennen bzw. korrigieren lassen – ein reiner Existenzbeweis, der jedoch keine konkrete, praktisch berechenbare Kodierung liefert.
+
+==== Bedeutung: von der Ingenieurskunst zur Wissenschaft
+
+Vor Shannon war die Nachrichtentechnik im Wesentlichen eine Ingenieursdisziplin, geprägt von Versuch, Irrtum und praktischer Erfahrung (wie die vorangegangenen Abschnitte 1.1–1.6 eindrücklich zeigen). Shannons rigorose mathematische Sichtweise machte daraus eine *Wissenschaft*: Er lieferte erstmals ein präzises, mathematisches Fundament für einen zuvor nur vage gefassten Begriff – die Information selbst – und zeigte, dass völlig unterschiedliche Übertragungsmedien (Morse-Signal, Telefongespräch, moderner Datenstrom) denselben fundamentalen Gesetzmäßigkeiten unterliegen.
+
+==== Ausblick: Meilensteine nach 1948
+
+Shannons Existenzbeweis löste einen jahrzehntelangen Wettlauf um konkrete, im Shannon'schen Sinne (nahezu) optimale Kodierungsverfahren aus. Auswahl wichtiger Meilensteine, die in den folgenden Lektionen vertieft werden:
+
+[cols="1,2,3", options="header"]
+|===
+| Jahr | Entdecker | Verfahren
+
+| 1949 | Robert M. Fano | Shannon-Fano-Codierung
+| 1950 | Richard Hamming | Hamming-Codes (Fehlerkorrektur)
+| 1952 | David A. Huffman | Huffman-Codierung
+| 1954 | Reed, Muller | Reed-Muller-Codes
+| 1955 | Peter Elias | Faltungscodes
+| 1957 | Eugene Prange | CRC-Codes (Cyclic Redundancy Check)
+| 1960 | Reed, Solomon | Reed-Solomon-Codes
+| 1967 | Andrew Viterbi | Viterbi-Algorithmus
+| 1976 | Pasco, Rissanen | Arithmetische Codierung
+| 1977/78 | Lempel, Ziv | LZ77- / LZ78-Kompression
+| 1984 | Terry Welch | LZW-Kompression
+| 1993 | Berrou, Glavieux, Thitimajshima | Turbo-Codes
+| 1994 | Burrows, Wheeler | Burrows-Wheeler-Transformation
+| 2009 | Jarosław Duda | ANS-Kompression
+|===
+
+Diese Zeitleiste macht sichtbar, dass die Kodierungstheorie – Gegenstand der Lektionen 2 bis 4 dieses Moduls – unmittelbar aus Shannons Arbeit von 1948 erwächst: Quellencodierung (Lektion 3) adressiert Shannons erste Kernfrage (Entropie/Kompression), Kanalcodierung (Lektion 4) seine zweite (Fehlererkennung und -korrektur).
+
+=== Fazit
+
+Die Geschichte der Nachrichtentechnik – von den Feuerzeichen der Antike über mechanische und elektrische Telegrafen, Telefonie und Funk bis zur Elektronik des 20. Jahrhunderts – ist eine Geschichte fortschreitender Kodierung: immer differenziertere, schnellere und zuverlässigere Wege, Information in übertragbare Signale zu fassen (Lernziel 1). Claude Shannons Arbeit von 1948 bildet dabei die entscheidende Zäsur: Sie hebt die zuvor rein ingenieurwissenschaftlich getriebene Disziplin auf eine mathematisch-theoretische Grundlage und schafft mit den Begriffen Entropie, Kanalkapazität und Bit das begriffliche Fundament, auf dem die gesamte moderne Informations- und Kodierungstheorie – und damit auch der weitere Verlauf dieses Moduls – aufbaut (Lernziel 2).
