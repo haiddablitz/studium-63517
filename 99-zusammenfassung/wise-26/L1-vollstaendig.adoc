@@ -1,0 +1,436 @@
+= 63517 Informations- und Kodierungstheorie – L1: Geschichte der Nachrichtentechnik
+:doctype: article
+:lang: de
+:toc: left
+:toc-title: Inhalt
+:toclevels: 3
+:imagesdir: images
+:figure-caption!:
+:table-caption!:
+:example-caption!:
+:note-caption: Hinweis
+:icons: font
+
+include::../stil.adoc[]
+
+Vollständige Zusammenfassung pro Abschnitt. +
+Quelle: 63517 Informations- und Kodierungstheorie, Lektion 1 = Kapitel 1 des Basistexts (Hoffmann, Einführung in die Informations- und Codierungstheorie, 2. Auflage), Ausgabe WiSe 2026/27. Gliederung und Nummerierung entsprechen der Quelle; einzelne Seitenverweise beziehen sich auf diese Ausgabe. +
+Nicht enthalten: biografische Kästen, Porträts und Fotos, Zitate, 1.8 Übungsaufgaben. +
+Das Kapitel ist rein geschichtlich und deshalb stärker verdichtet als die übrigen Lektionen; ausführlich bleiben die Codes der einzelnen Telegrafen und Abschnitt 1.7.
+
+== 1 Geschichte der Nachrichtentechnik
+
+Das Kapitel verfolgt die Nachrichtenübertragung von den Signalfeuern der Antike über optische und elektrische Telegrafen, Telefon und Funk bis zur Digitaltechnik und endet mit der Entstehung der Informations- und Codierungstheorie durch Claude Shannon (1948).
+
+.Überblick: Stationen der Nachrichtentechnik
+[cols="2,3,6,2",options="header"]
+|===
+|Zeit |Person |System oder Ereignis |Abschnitt
+
+|458 v. Chr. |Aischylos |Fackelpost im Drama _Agamemnon_: ein einziges, vorher verabredetes Ereignis |1.1.1
+|4. Jh. v. Chr. |Aineias Taktikos |Synchrontelegraf: Auswahl aus vorher festgelegten Nachrichten |1.1.2
+|2. Jh. v. Chr. |Polybios |Fackelcode: erster Zeichencode |1.1.3
+|1794 |Claude Chappe |Semaphoren-Telegraf Paris – Lille, 196 Figuren |1.2.1
+|1795 |John Gamble, Lord George Murray |Klappentelegrafen (Shutter-Telegrafen): Binärcodes |1.2.2
+|1800 |Alessandro Volta |Volta’sche Säule: kontinuierlicher Stromfluss |1.3
+|1809 |Samuel Thomas von Soemmerring |elektrolytischer Telegraf mit 35 Leitungen |1.3
+|1820 |Hans Christian Ørsted |Strom lenkt Magnetnadeln ab |1.3
+|– |Gauß und Weber |erster elektromagnetischer Telegraf, eigener Binärcode |1.3.1
+|1839 |Cooke und Wheatstone |Fünf-Nadel-Telegraf im Bahnbetrieb |1.3.1
+|1838–1844 |Morse, Vail, Gale |Morse-Telegraf und Morse-Code; Linie Washington – Baltimore |1.3.2
+|1866 |Cyrus W. Field |dauerhaft funktionierendes Transatlantikkabel |1.4
+|1876 |Bell (Gray, Meucci, Reis) |Telefon |1.5.1
+|1886 |Heinrich Hertz |Nachweis elektromagnetischer Wellen |1.5.2
+|1901 |Guglielmo Marconi |Funkübertragung über den Atlantik |1.5.2
+|1906 |Lee De Forest |Audion, Vorläufer der Triodenröhre |1.5.2
+|1946 / 1947 / 1958 |– |ENIAC / Transistor / integrierter Schaltkreis |1.6
+|1948 |Claude Shannon |„A mathematical theory of communication“: Informationstheorie |1.7
+|===
+
+=== 1.1 Von Fackeln und Feuern der Antike
+
+==== 1.1.1 Fackelpost des Agamemnon
+
+* Das Drama _Agamemnon_ des Aischylos (erster Teil der _Orestie_, Erstaufführung 458 v. Chr.) enthält eine der ältesten Beschreibungen der *Fackelpost*: Die Nachricht vom Fall Trojas wird über 8 nacheinander entzündete Signalfeuer nach Argos gemeldet.
+* Fackelpost ist die primitivste Art der optischen Nachrichtenübertragung: Eine vorher festgelegte Botschaft wird durch das Abbrennen von Fackeln oder Holzstößen über längere Distanzen übermittelt.
+* Die Schilderung ist wahrscheinlich nicht realistisch: Zwischen allen Stationen besteht zwar Sichtverbindung, ein Feuer auf dem Athos hätte aber im 177 km entfernten Makistos kaum mit bloßem Auge sichtbar sein können. Das Drama belegt trotzdem, dass das Prinzip 458 v. Chr. bekannt war.
+* Bedeutung: erstmals hohe Geschwindigkeit über große Distanzen (wenige Stunden statt mehrerer Tage mit Ross und Reiter).
+* Nachteile: aufwendiger Aufbau, nur bei günstiger Geografie möglich, und vor allem *keine differenzierten Nachrichten* – ein Feuer signalisiert nur das Eintreten eines einzigen, vorher verabredeten Ereignisses.
+
+* Weg laut Drama: vom Ida-Gebirge östlich von Troja über 7 weitere Relaisstationen (Lemnos, Athos, Makistos, Messapios, Kithairon, Aigiplanktos, Arachnaion) zum Palast in Argos.
+
+==== 1.1.2 Synchrontelegraf des Aineias
+
+Der *Synchrontelegraf* (Aineias Taktikos, 4. Jh. v. Chr., überliefert durch Polybios im 2. Jh. v. Chr.) ist eine der ersten Konstruktionen für differenzierte Nachrichten.
+
+* Aufbau: zwei identische Tongefäße (ca. 1,5 m hoch, 0,5 m breit), mit Wasser gefüllt, mit Ausflussöffnung am unteren Rand. In jedem schwimmt ein Schwimmer mit einem Nachrichtenstab, in den mehrere Textnachrichten eingraviert sind. Ein Gefäß steht beim Sender, das andere beim Empfänger oder in einer Relaisstation.
+
+Ablauf einer Übertragung:
+
+. Beide Gefäße werden bis zum Rand gefüllt.
+. Der Sender gibt ein Lichtsignal; beide öffnen gleichzeitig den Ausfluss.
+. Beim zweiten Lichtsignal des Senders werden die Öffnungen verschlossen.
+. Die Botschaft wird am eingesunkenen Nachrichtenstab auf Höhe des Gefäßrands abgelesen.
+
+Die Nachricht ist also in der Zeitspanne zwischen den beiden Lichtsignalen codiert. Eine praktische Anwendung ist nicht überliefert.
+
+.Abbildung 1.4: Aufbau des Synchrontelegrafen des Aineias
+image::L1-abb-1-4-synchrontelegraf.png[width=150]
+
+==== 1.1.3 Fackelcode des Polybios
+
+* Mangel des Synchrontelegrafen: Übertragbar ist nur eine vorher festgelegte Auswahl von Nachrichten; unvorhergesehene Ereignisse lassen sich nicht melden.
+* Lösung des Polybios: Nachrichten nicht als Ganzes, sondern *buchstabenweise* codieren.
+* Sender: 10 Fackeln, je 5 hinter einer von zwei Sichtblenden; jede Fackel kann einzeln über die Blende gehoben werden.
+* Empfänger: beobachtet durch eine Sichtröhre. Die Anzahl der Fackeln über der linken Blende ist die *Spaltennummer*, die Anzahl über der rechten Blende die *Zeilennummer* in einer Buchstabentafel.
+* Der Fackelcode ist der *erste Zeichencode* in der Geschichte der Nachrichtenübertragung.
+* Kaum praktische Verwendung: Ohne Fernrohr betrug der Abstand zwischen Sender und Empfänger nur einige hundert Meter, sodass für längere Distanzen zu viele Relaisstationen nötig gewesen wären.
+
+.Abbildung 1.5: Fackelcode des Polybios
+image::L1-abb-1-5-fackelcode-polybios.png[width=180]
+
+Die 24 griechischen Buchstaben stehen in 5 Spalten zu je 5 Zeilen (letzte Spalte 4). Im Bild: 2 Fackeln links, 5 Fackeln rechts – Spalte 2, Zeile 5, also κ.
+
+=== 1.2 Das mechanische Internet
+
+==== 1.2.1 Semaphoren-Telegraf von Claude Chappe
+
+* Die Französische Revolution (ab 1789) und die Kriege mit den Nachbarn machten ein landesweites optisches Kommunikationsnetz zur Notwendigkeit.
+* Am 24. März 1792 stellte Claude Chappe (1763–1805) der Nationalversammlung seinen _tachygraphe_ (Schnellschreiber) vor. April 1793: Auftrag für eine ca. 30 km lange Teststrecke (Ménilmontant – Ecouen – Saint-Martin-du-Tertre).
+* Erste Linie Paris – Lille: 210 km, 23 Relaisstationen, fertig im Juli 1794; seitdem offiziell _Télégraphe_ (Fernschreiber). Erste bedeutende Nachricht am 15. August 1794: Rückeroberung von Le Quesnoy.
+* Ausbau: 1798 Paris – Strasbourg und Paris – Brest; 1803 Brüssel und Boulogne; 1804 Dijon und Lyon; um 1845 bis Amsterdam sowie Turin, Mailand und Venedig.
+
+Aufbau einer Station (Mast mit beweglichen Balken, über Kurbeln am Boden gesteuert):
+
+* *Regulator*: ca. 4,5 m langer Balken am oberen Ende des Masts, 4 Stellungen (vertikal, diagonal fallend, horizontal, diagonal steigend).
+* *Indikatoren*: an jedem Ende des Regulators ein ca. 2 m langer Balken, unabhängig vom Regulator in 7 Winkelpositionen einstellbar (0°, 45°, 90°, 135°, 225°, 270°, 315°).
+* Da Regulator und beide Indikatoren unabhängig bewegt werden, sind theoretisch 4 · 7 · 7 = 196 verschiedene Figuren darstellbar.
+
+.Abbildung 1.8: Auszug aus dem preußischen Semaphoren-Alphabet
+image::L1-abb-1-8-semaphoren-alphabet.png[width=520]
+
+Jedes Zeichen ist eine geometrische Figur aus Regulator und zwei Indikatoren (rechts die Station mit Gegengewicht und Kurbelsteuerung). Anders als bei den Klappentelegrafen ist das kein Binärcode.
+
+==== 1.2.2 Klappentelegrafen
+
+* In Großbritannien wurden zur selben Zeit *Shutter-Telegrafen* erprobt: Ein Zeichen wird durch Klappen codiert, die über Seilzüge einzeln in zwei Positionen gebracht werden (sichtbar, nicht sichtbar).
+* Sie arbeiten nach dem gleichen Prinzip wie moderne Computer: Symbole werden im *Binärsystem* dargestellt, nicht durch geometrische Figuren.
+
+.Varianten der Klappentelegrafen
+[cols="2,2,6",options="header"]
+|===
+|Entwurf |Klappen |Eigenschaften
+
+|Gamble, Fünf-Klappen-Telegraf
+|5, senkrecht übereinander
+|32 Kombinationen. Nachteil: Die drei mittleren Klappen sind aus größerer Entfernung nicht mehr deutlich zu unterscheiden.
+
+|Gamble, Vier-Klappen-Telegraf
+|4
+|Über größere Distanzen sichtbar, aber nur 16 Kombinationen – zu wenige für das Alphabet. Gamble belegte phonetisch verwandte Buchstaben mit dem gleichen Codewort (z. B. B+P, D+T), weil Texte auch dann noch verstanden werden, wenn ein Buchstabe durch einen ähnlich klingenden ersetzt wird.
+
+|Murray
+|6, in zwei Spalten zu je drei Klappen
+|Bewährte sich in der Praxis und wurde statt Gambles Entwürfen gebaut.
+|===
+
+* 1795 Beschluss für die Linie London – Deal nach Murrays Plänen; ein Jahr später London – Portsmouth; 1805 Verlängerung nach Plymouth, 1808 nach Yarmouth.
+* Die englischen Linien dienten nur militärischen Nachrichten und wurden nach dem Pariser Frieden von 1814 stillgelegt. Nach Napoleons Rückkehr baute man statt einer Instandsetzung eine neue Linie mit drei Indikatoren an einem senkrechten Mast, ohne Regulator.
+* Von den optischen Telegrafennetzen sind heute fast nur Ortsnamen wie _Telegraph hill_ geblieben.
+
+.Abbildung 1.10: Optische Telegrafen nach den Entwürfen von John Gamble aus dem Jahr 1795
+image::L1-abb-1-10-gamble-telegrafen.png[width=400]
+
+Beim Vier-Klappen-Telegrafen teilen sich mehrere Buchstaben ein Codewort (B+P, D+T, E+I, K+C, S+C, V+U+W).
+
+=== 1.3 Elektrische Nachrichtenübertragung
+
+Vorgeschichte:
+
+* Thales von Milet (550 v. Chr.): Geriebener Bernstein zieht leichte Gegenstände an. William Gilbert (_De Magnete_, 1600) beginnt die systematische Untersuchung; im 17. Jh. erste Maschinen für Reibungselektrizität.
+* 1753 beschreibt ein Brief eines unbekannten „C. M.“ im _Scots Magazine_ bereits einen nahezu vollständigen elektrischen Telegrafen mit einer Leitung je Buchstabe – noch bevor die erste Semaphoren-Station stand.
+* Vorteile eines elektrischen Netzes gegenüber dem optischen: rund um die Uhr und bei jedem Wetter verfügbar, weniger Relaisstationen, daher kostengünstiger und weniger fehleranfällig.
+* Erst die *Volta’sche Säule* (Alessandro Volta, 1800; in Reihe geschaltete galvanische Zellen aus Zink, Elektrolyt und Kupfer) lieferte kontinuierliche Stromflüsse.
+
+Soemmerring-Telegraf (1809):
+
+* 35 separate Leitungen, eine je Buchstabe und Dezimalziffer (tatsächlich nur 25 der 26 Buchstaben, das X fehlte). Beim Empfänger enden die Leitungen als Elektroden in einem Wasserbad.
+* Der Sender verbindet zwei Leitungen mit den Polen der Volta’schen Säule; beim Empfänger steigen an den zugehörigen Elektroden Bläschen auf (*Elektrolyse*). Zeichen wurden so paarweise übertragen, später mit gemeinsamem Rückleiter auch einzeln. Die Kombination „BC“ löste eine Klingel aus, die den Beginn einer Nachricht ankündigte.
+* Für die Praxis viel zu langsam – es fehlte ein einfaches Mittel, fließenden Strom sichtbar zu machen.
+
+Die Grundlagen dafür folgten ab 1820: Ørsted (Magnetnadeln richten sich durch Ströme aus), Ampère (mathematische Theorie dazu), Sturgeon (1824 erster Elektromagnet), Ohm (ein Jahr später das Ohm’sche Gesetz).
+
+==== 1.3.1 Nadeltelegrafen
+
+Gauß und Weber:
+
+* Sender: Magnetstab in einer Spule, jede Bewegung erzeugt einen elektrischen Impuls. Empfänger: ein beweglicher Spiegel, der sich leicht nach links oder rechts dreht und mit einem Teleskop aus fünf Metern Entfernung beobachtet wird.
+* Zeichenweise Übertragung mit einem eigenen *Binärcode*: Jedes Zeichen ist eine Folge von linken und rechten Spiegelbewegungen.
+* Erprobt über ein ca. 1,2 km langes Kupferkabel über den Dächern von Göttingen. Es war der erste elektromagnetische Telegraf der Welt, gebaut aus wissenschaftlichem Interesse und ohne kommerzielle Absicht.
+
+.Abbildung 1.15: Telegrafencode von Gauß und Weber
+image::L1-abb-1-15-code-gauss-weber.png[width=260]
+
+Die Codewörter sind unterschiedlich lang: 1 Spiegelbewegung (a, b) bis 4 Spiegelbewegungen (p bis z). Ein j kommt nicht vor.
+
+Schilling von Cannstatt und Cooke/Wheatstone:
+
+* Paul Ludwig Schilling von Cannstatt (zuvor Assistent Soemmerrings) verwarf die Elektrolyse und codierte Zeichen über bewegliche Magnetnadeln; sein Fünf-Nadel-Telegraf wurde am 23. September 1835 in Bonn vorgeführt. Nach seinem Tod 1837 lebte die Idee über die Vorlesungen von Georg Wilhelm Munke weiter.
+* William Fothergill Cooke baute danach einen Telegrafen mit drei Nadeln und 6 Leitungen, scheiterte aber am *Problem der langen Leitung*: Über ein 1,6 km langes Kabel gelang keine Übertragung.
+* Lösung nach Joseph Henry (1829): statt einer einzigen großen Batterie mehrere kleine, in Reihe geschaltete Batterien. Cooke erfuhr davon über Charles Wheatstone, mit dem er eine Partnerschaft einging.
+* *Five needle telegraph*: fünf Nadeln auf einem rautenförmigen Brett, in Ruhe vertikal. Für ein Zeichen schlägt eine Nadel nach links und eine andere nach rechts aus; am Schnittpunkt der beiden so gewählten Diagonalen steht das Zeichen. Damit lassen sich genau 20 Zeichen codieren – C, J, Q, U, X und Z fehlen.
+* Einsatz: 21 km lange Linie der Great Western Railways (Paddington Station – West Drayton), in Betrieb seit dem 9. Juli 1839.
+* Weiterentwicklung zu einem Apparat mit zwei Nadeln und zum *Zeigertelegrafen* mit einer einzigen Nadel: Codewörter nur noch sequenziell, dafür schneller und zuverlässiger. Außerhalb Großbritanniens setzten sich diese Telegrafen nicht durch.
+
+.Abbildung 1.19: Fünf-Nadel-Telegraf von Cooke und Wheatstone
+image::L1-abb-1-19-fuenf-nadel-telegraf.png[width=480]
+
+==== 1.3.2 Der Morse-Telegraf
+
+Entstehung:
+
+* 1832 hörte der Kunstprofessor Samuel F. B. Morse (1791–1872) auf dem Schiff _Sully_ von Charles T. Jackson, dass sich Strom ohne Zeitverzögerung durch beliebig lange Leiter bewegt, und fasste den Plan eines elektrischen Telegrafen.
+* Erster Prototyp ab 1835 (Professur an der New York University): Ein Stift an einer Staffelei wird von einem Elektromagneten hin- und herbewegt und hat ständig Kontakt zu einem vorbeigezogenen Papierstreifen – es entsteht eine Zickzackkurve. Erst in späteren Entwürfen hebt der Elektromagnet den Stift an, wodurch die typischen *Punkte und Striche* entstehen.
+* Ursprüngliche Sendeeinrichtung: Zackenbretter erzeugen die Impulse; übertragen werden nur die Ziffern 1 bis 5, die Zahlenfolgen werden mit einem Codebuch in Klartext übersetzt.
+* Die Übertragung versagte ab ca. 10 m Leitungslänge. Der Chemieprofessor Leonard D. Gale (ein Freund Joseph Henrys) fand die Ursachen: zu geringe Spannung und ein zu schwacher Elektromagnet.
+* Patentanmeldung am 3. Oktober 1837, Patent Nr. 1647 am 20. Juni 1840.
+* September 1837: Vertrag mit Alfred Vail, der den Prototyp zum marktreifen Produkt machte. Er ersetzte die Sendeeinrichtung durch einen einfachen Handschalter und verwarf das Codebuch; 1838 entstand der erste *Morse-Code*, der eine Nachricht buchstabenweise repräsentiert. Vail gilt als der eigentliche Vater des Morse-Telegrafen und ersann wahrscheinlich auch das Alphabet.
+* 1843 bewilligte der Kongress 30.000 $ für die ca. 60 km lange Linie Washington – Baltimore. Die unterirdische Verlegung scheiterte an der Isolierung (nach 9 Meilen keine Übertragung mehr), gebaut wurde als Überlandkabel. Betrieb ab 24. Mai 1844; erstes Telegramm: „What hath God wrought!“.
+
+Die beiden Morse-Codes:
+
+* *Amerikanischer Morse-Code*: aus einer Modifikation des Codes von 1838 hervorgegangen, 1844 verabschiedet und in allen US-amerikanischen Netzen verwendet.
+* *Internationaler* (kontinentaler) *Morse-Code*: geringfügig modifiziert, 1851 in Berlin festgeschrieben, außerhalb der USA im Einsatz. In den USA lebte der ältere Code weiter.
+
+[NOTE]
+====
+Der Basistext (S. 38) nennt für den amerikanischen Morse-Code einen „Code von 1938“ und das Jahr „1944“. Richtig sind 1838 und 1844: Die Errata des Autors führen diese Korrektur für die 1. Auflage (dort S. 39); in der 2. Auflage steht die Stelle unverändert. +
+Leonard D. Gale wird im Basistext stellenweise „Gail“ geschrieben (S. 37, 38); das ist nicht in den Errata verzeichnet.
+====
+
+.Abbildung 1.26: Der amerikanische und der internationale Morse-Code im Vergleich
+image::L1-abb-1-26-morse-codes.png[width=540]
+
+Der amerikanische Code verwendet neben Punkt und Strich auch Lücken innerhalb eines Zeichens (C, O, R, Y, Z) und Striche unterschiedlicher Länge (L, 0). Der internationale Code kommt mit Punkt und Strich aus; alle Ziffern haben dort genau 5 Signale.
+
+.Internationaler Morse-Code (aus Abbildung 1.26)
+[cols="1,2,1,2,1,2,1,2",options="header"]
+|===
+|Zeichen |Code |Zeichen |Code |Zeichen |Code |Zeichen |Code
+
+|A |· − |J |· − − − |S |· · · |1 |· − − − −
+|B |− · · · |K |− · − |T |− |2 |· · − − −
+|C |− · − · |L |· − · · |U |· · − |3 |· · · − −
+|D |− · · |M |− − |V |· · · − |4 |· · · · −
+|E |· |N |− · |W |· − − |5 |· · · · ·
+|F |· · − · |O |− − − |X |− · · − |6 |− · · · ·
+|G |− − · |P |· − − · |Y |− · − − |7 |− − · · ·
+|H |· · · · |Q |− − · − |Z |− − · · |8 |− − − · ·
+|I |· · |R |· − · | | |9 |− − − − ·
+| | | | | | |0 |− − − − −
+|===
+
+Die Codewörter sind unterschiedlich lang: E und T haben ein Signal, die übrigen Buchstaben zwei bis vier, die Ziffern fünf.
+
+Verbreitung:
+
+* Zur Zeit der ersten Linie wurden noch 90 % der Nachrichten in den USA von Reiterkurieren oder Postkutschen transportiert.
+* 1. April 1845: erste öffentliche Telegrafenstation in Washington; 15. Mai 1845: Gründung der _Magnetic Telegraph Company_. 1850 konkurrierten bereits 20 Firmen; 1861 stellte die _Western Union Telegraph Company_ die erste transkontinentale Linie fertig.
+* Netzstruktur ähnlich der Briefpost: Große Vermittlungszentren (_relais office_) versorgen das Umland sternförmig mit Telegrafenlinien, an denen kleinere Stationen aufgereiht sind. Stationen derselben Linie kommunizieren direkt und haben eine Kennung aus ein oder zwei Buchstaben. Nachrichten an andere Linien laufen über das eigene Vermittlungszentrum und eine Direktverbindung (_intercity cable_) zum Vermittlungszentrum des Empfängers.
+* Um 1900 arbeiteten im Chicagoer Relaiszentrum der Western Union knapp 900 Telegrafisten gleichzeitig.
+
+=== 1.4 Mission Transatlantik
+
+Zwischen den Kontinenten mussten Nachrichten weiter per Dampfschiff transportiert werden. Der Kaufmann Cyrus W. Field (1819–1892) begann 1854 nach einem Treffen mit dem Ingenieur Frederic N. Gisborne mit dem Projekt eines Transatlantikkabels.
+
+Voraussetzungen:
+
+* *Telegrafenplateau* (_telegraph plateau_): Hochebene zwischen Neufundland und Irland in ca. 1000 m bis 3000 m Tiefe, entdeckt durch die Tiefenmessungen von Matthew F. Maury (1852/1853).
+* *Guttapercha*: kautschukähnliches Material, guter Isolator auch bei tiefen Temperaturen und in Salzwasser lange haltbar.
+
+.Die Verlegeversuche
+[cols="2,8",options="header"]
+|===
+|Jahr |Verlauf
+
+|1857
+|Kabel rund 3000 km lang und 2500 Tonnen schwer, verteilt auf die H.M.S. Agamemnon und die U.S.S. Niagara; Start am 5. August an der irischen Küste. Am 10. Tag riss das Kabel nach 330 Seemeilen und versank.
+
+|1858
+|Die Kabelhälften werden zuerst in der Mitte des Atlantiks verspleißt, die Schiffe fahren in entgegengesetzte Richtungen. Am 4. August erreicht die Niagara Neufundland, einen Tag später die Agamemnon das irische Valentia: erste funktionstüchtige Verbindung. Nach wenigen Tagen ließ die Signalqualität nach; der Ingenieur Wildman Whitehouse erhöhte die Spannung, das Kabel verschmorte und war zerstört (_Great Atlantic Bubble_).
+
+|1865
+|Neues Kabel aus einem Stück, dicker und stabiler, rund 7000 Tonnen; verlegt mit der _Great Eastern_, dem größten Dampfschiff der Zeit. Rund 1000 km vor Neufundland riss das Kabel.
+
+|1866
+|Nach 15-tägiger Fahrt erreicht die Great Eastern am 27. Juli Neufundland. Im August wird das Kabel von 1865 geborgen und ergänzt; ab September 1866 verbinden zwei funktionsfähige Leitungen die Kontinente.
+|===
+
+* Aufbau des Kabels von 1865: im Innern 7 Kupferleitungen, umgeben von vier Schichten Guttapercha und einem Teermantel; außen 10 verdrillte Stahlseile für Schutz und Zugfestigkeit.
+* Konkurrenzprojekt: Die Western Union (seit Oktober 1861 mit eigener Transkontinentallinie) wollte Europa über Alaska, die knapp 85 km breite und nur 30 bis 50 m tiefe Beringstraße und Sibirien auf dem Landweg erreichen. Der Bau lief 1865 und wurde nach Fields Erfolg im Juli 1867 aufgegeben.
+* Heute: Verlegung mit Satellitennavigation, Reparaturen sind Routine. Moderne Kabel haben einen kunststoffummantelten Glasfaserkern; Amitié/AEC-3 leitet mehr als 300 Terabit pro Sekunde.
+
+=== 1.5 Von der Telegrafie zur Telefonie
+
+Um den wachsenden Bedarf zu decken, wurden neue Linien gebaut und die bestehenden Netze effizienter genutzt:
+
+* Leichter bedienbare Apparate: *ABC-Telegraf* (Wheatstone) und *Typendrucktelegraf* (_Hughes printer_, David Edward Hughes) – der erste Apparat, der empfangene Nachrichten im Klartext ausgab; gesendet wurde über eine Klaviatur mit 28 Tasten statt von Hand im Binärcode.
+* Wheatstones Apparat las Morse-Signale von einem vorgestanzten Band und beschleunigte die Übertragung um den Faktor 10.
+* *Duplexbetrieb*: gleichzeitiges Senden in beide Richtungen über dieselbe Leitung, verdoppelt die Leitungskapazität (Patent 1872, Joseph B. Stearns).
+* *Quadruplex-Telegraf* (Thomas Alva Edison, 1874): vier Signale gleichzeitig über eine Leitung. Je Richtung wird ein Signal durch Änderung der Signalamplitude (*Amplitudenmodulation*) und das andere durch Verschiebung des Phasenwinkels (*Phasenmodulation*) codiert.
+
+==== 1.5.1 Suche nach dem harmonischen Telegrafen
+
+Der *harmonische Telegraf* sollte über *Frequenzmodulation* mehrere Morse-Datenströme parallel übertragen: Auf der Senderseite schwingen mehrere Stimmgabeln, die entstehenden Wechselströme unterschiedlicher Frequenz werden mit den binären Morse-Datenströmen überlagert und beim Empfänger wieder getrennt. Aus dieser Suche ging das Telefon hervor.
+
+.Die Beteiligten an der Erfindung des Telefons
+[cols="2,8",options="header"]
+|===
+|Person |Beitrag
+
+|Alexander Graham Bell (1847–1922)
+|Taubstummenlehrer in Boston; Vereinbarung vom 27. Februar 1875 mit den Geldgebern Sanders und Hubbard über einen harmonischen Telegrafen, Assistent Thomas A. Watson. Der Prototyp übertrug komplexere Töne als erwartet. _Gallows telephone_ (1875) noch ohne brauchbare Sprachqualität. Patentantrag _Improvement in Telegraphy_, zwei Stunden vor Gray eingereicht, am 7. März 1876 als Patent 174465 erteilt – ohne funktionierendes Gerät, was das amerikanische Patentrecht erlaubte. Durchbruch am 10. März 1876 („Mr. Watson, come here; I want you!“) mit einem Mikrofon nach Grays Prinzip des _liquid transmitter_. 9. Juli 1876 Gründung der _Bell Telephone Company_.
+
+|Elisha Gray (1835–1901)
+|Suchte ebenfalls den harmonischen Telegrafen (Patent vom 27. Juli 1875). Am 14. Februar 1876 Antrag „Transmitting Vocal Sounds Telegraphically“ mit dem _liquid transmitter_ – am selben Tag wie Bell. Die meisten Historiker halten es für gesichert, dass Bell unerlaubt Einblick in Grays Antrag erhielt.
+
+|Antonio Meucci (1808–1889)
+|Erkannte schon in den 50er-Jahren das Prinzip und baute ein Haustelefon; 1856–1870 über 30 Prototypen des _Teletrofono_. Patentantrag 1871 („Sound Telegraph“) nur vage formuliert; das befristete Patent konnte er 1874 nicht mehr verlängern. 2002 würdigte ihn eine Resolution des U. S. House of Representatives.
+
+|Philipp Reis (1834–1874)
+|Stellte seinen Apparat am 26. Oktober 1861 dem Physikalischen Verein in Frankfurt vor („Das Pferd frisst keinen Gurkensalat!“). Technischer Unterschied: Die Membran öffnet und schließt einen Stromkreis, die Schallwellen werden also in ein *digitales* Signal übersetzt – nicht in ein *analoges* wie bei Bell und Gray. Töne und Gesang waren erkennbar, das gesprochene Wort nicht. Das Wort _Telephon_ stammt nicht von Reis, sondern taucht bereits 1796 bei Gottfried Huth auf.
+|===
+
+* Die Western Union lehnte 1876 den Kauf der Rechte für 100.000 Dollar ab („electrical toy“). Damals gab es allein in den USA über 8000 Telegrafenstationen und knapp 350 000 km Leitungen.
+* Später zog die Western Union mit Grays Rechten vor Gericht: die größte Patentschlacht um eine technische Erfindung, über 600 Prozesse in 11 Jahren, am Ende zugunsten Bells. Auch der _Eaton-Spencer case_ (ab 22. Juni 1880), der sich auf das Reis’sche Telefon stützte, blieb erfolglos.
+* Wer der wahre Erfinder ist, lässt sich wegen der parteiischen Quellen kaum klären; sicher ist, dass weder Bell noch Gray der Erste war, der Töne über eine elektrische Leitung übertrug.
+
+==== 1.5.2 Drahtlos durch den Äther
+
+* James Clerk Maxwell (1865, _A Dynamical Theory of the Electromagnetic Field_): Aus den *Maxwell’schen Gleichungen* folgt die Existenz *elektromagnetischer Wellen* – zunächst nur theoretisch.
+* Heinrich Hertz wies sie am 11. November 1886 zwischen einer Sende- und einer Empfangseinrichtung experimentell nach und zeigte damit die prinzipielle Machbarkeit drahtloser Übertragung, erkannte deren praktischen Nutzen aber nicht.
+* Guglielmo Marconi (1874–1937): Patent 1896, mit Unterstützung von Sir William Preece (British Post Office); 1897 Gründung der _Wireless Telegraph & Signal Company_. 1901 Übertragung des morse-codierten Buchstabens „S“ über den Atlantik, zunächst angezweifelt; ein Jahr später überzeugten systematische Versuche auf der S. S. Philadelphia (Entfernungen, Sendefrequenzen, Tageszeit, Wetter).
+* Folgen: Revolution der marinen Kommunikation (Schiffe auf hoher See erreichbar, Notrufe); auf dem Festland bündeln Mikrowellensender mehrere Morse-Datenströme, die Überlandleitungen verschwinden. 1906 erste Radionachricht durch Reginald Aubrey Fessenden.
+
+Lee De Forest und die Triode (1906):
+
+* *Diode*: Vakuumröhre mit zwei Elektroden, *Anode* (Pluspol) und geheizte *Kathode* (Minuspol). Übersteigt die Spannung einen Schwellenwert, fließt ein kontinuierlicher Strom von der Kathode zur Anode.
+* *Triode*: zusätzlich ein Metallgitter als dritte Elektrode. Eine Spannung am Gitter regt den Stromfluss an oder dämpft ihn; entscheidend ist, dass eine kleine Änderung der Gitterspannung eine große Änderung des Kathoden-Anoden-Stroms bewirkt.
+* De Forests *Audion* war der Vorläufer der Triodenröhre und damit der erste *elektronische Verstärker*.
+* Massenmedium wurde das Radio in Deutschland erst mit dem _Volksempfänger_ (1933), wenige Jahre später folgte der Fernseher.
+
+.Abbildung 1.49: Die Diodenröhre und die Triodenröhre im Vergleich
+image::L1-abb-1-49-diode-triode.png[width=150]
+
+=== 1.6 Von der Röhre zum Supercomputer
+
+Wird das Gitter einer Triode so geschaltet, dass der Strom entweder ungehindert oder gar nicht fließt, entsteht ein *digitales Schaltelement*.
+
+.Die drei Technologiesprünge der Computertechnik
+[cols="2,2,7",options="header"]
+|===
+|Sprung |Jahr |Merkmale
+
+|Triodenröhre
+|1946
+|ENIAC (_Electronic Numerical Integrator And Computer_): Röhren statt elektrischer Relais, Schaltgeschwindigkeit um den Faktor 1000 höher, Taktfrequenz 100 Kilohertz. Mit Verzweigungen und Schleifen so berechnungsstark wie eine universelle Turing-Maschine und daher von vielen als erster wirklicher Computer angesehen. Rund 18.000 Vakuumröhren, 30 Tonnen, 174.000 Watt.
+
+|Transistor
+|1947
+|Funktionsprinzip schon 1928 von Julius Edgar Lilienfeld patentiert; erster technisch verwertbarer Transistor von Shockley, Bardeen und Brattain an den Bell Laboratories, öffentlich verkündet am 1. Juli 1948.
+
+|Integrierter Schaltkreis
+|1958
+|Jack Kilby produziert mehrere Schaltelemente auf einem Stück Silizium (_integrated circuit_, IC) – Beginn der *Hochintegration*. Ein Jahr später *Planartechnik* (Fairchild Semiconductor) als Grundlage der Massenfertigung.
+|===
+
+* 1968 gründeten Robert Noyce, Gordon Moore und Andrew Grove Intel. 1971 integrierte Federico Faggin alle Komponenten eines Prozessors auf einem Stück Silizium: Intel 4004, der erste in Serie gefertigte Mikroprozessor.
+* Intel 4004: Strukturbreite 10 µm, Taktfrequenz 740 kHz, Bitbreite 4 Bit, 16 Datenregister, 4 Stapelregister, 2250 Transistoren; Rechenleistung etwa wie der ENIAC. Moderne Prozessoren liegen weit jenseits der Milliarden-Grenze.
+* *Moore’sches Gesetz* (_Moore’s law_): Die Anzahl der Transistoren auf einem Stück Silizium verdoppelt sich ca. alle 20 Monate. Moore sagte das 1965 voraus, zunächst mit der etwas zu optimistischen Annahme einer Verdopplung pro Jahr. Bisher wurde jede vorhergesagte Sättigung durch neue Erkenntnisse der Halbleitertechnik hinausgeschoben.
+
+=== 1.7 Informations- und Codierungstheorie
+
+Zwei Entwicklungen der 30er- und 40er-Jahre verliefen zunächst unabhängig:
+
+* *Analoge Übertragungstechnik*: Wieder stellte sich das Problem der langen Leitung. Das Signal wird mit der Entfernung schwächer und muss regelmäßig verstärkt werden; jede Verstärkung des Nutzsignals erhöht aber zwangsläufig auch den Rauschanteil, die Signalqualität sinkt kontinuierlich. Bessere Bauelemente lindern das nur.
+* *Digitale Informationsverarbeitung*: An die Stelle kontinuierlicher Spannungspegel treten die zwei binären Zustände 0 und 1, die durch elementare Schaltoperationen verknüpft werden. Aus den drei Grundverknüpfungen Negation, Konjunktion (UND) und Disjunktion (ODER) lassen sich alle Hardwareschaltungen aufbauen.
+
+1948 gelang der Brückenschlag: Claude Shannon (1916–2001) veröffentlichte „A mathematical theory of communication“ (in zwei Teilen im _Bell System Technical Journal_; 1949 als Buch unter dem Titel _The mathematical theory of communication_). Die Arbeit begründete die *Informationstheorie*, die theoretische Grundlage der gesamten modernen Datenübertragungs- und Speichertechnik, und machte aus einer Ingenieurdisziplin eine Wissenschaft. Shannon betrachtete die Datenübertragung abstrakt; seine Ergebnisse gelten deshalb für alle Arten der Nachrichtenübertragung.
+
+.Abbildung 1.59: Das Shannon’sche Kommunikationsmodell aus dem Jahr 1948
+image::L1-abb-1-59-kommunikationsmodell.png[width=560]
+
+Die fünf Komponenten des Kommunikationsmodells und die Störquelle:
+
+. *Kommunikationsquelle* (_information source_): wählt eine von mehreren möglichen Nachrichten aus und übergibt sie an den Sender.
+. *Sender* (_transmitter_): wandelt die Nachricht in ein Signal.
+. *Übertragungskanal* (_communication channel_): transportiert das Signal.
+. *Empfänger* (_receiver_): wandelt das Signal zurück in eine Nachricht.
+. *Informationssenke* (_destination_): nimmt die Nachricht entgegen.
+
+Die *Störquelle* (_noise source_) in der Mitte der Übertragungsstrecke modelliert alle Einflüsse, die das gesendete Signal verfälschen können.
+
+.Die drei Anwendungsszenarien aus Abbildung 1.60
+[cols="2,3,3,3,3",options="header"]
+|===
+|Szenario |Quelle und Senke |Sender und Empfänger |Kanal |Störquelle
+
+|Telegrafie
+|Absender und Adressat (geschriebener Text)
+|Morse-Telegraf: übersetzt Text in Morse-Codewörter und zurück
+|Telegrafenleitung
+|Leitungsstörung
+
+|Telefonie
+|Sprach- und Hörorgan
+|Telefon: setzt Schallwellen in elektrische Signale um und zurück
+|Telefonleitung
+|Leitungsstörung
+
+|Datenspeicherung
+|PC
+|CD-Brenner und CD-Leser
+|CD – kein räumlicher Transport, sondern ein Datenträger, der die Signale über die Zeit persistiert
+|Fingerabdruck
+|===
+
+Das grundlegend Neue an Shannons Theorie:
+
+* Eine übertragene Nachricht kann unabhängig von ihrem Kommunikationsmedium betrachtet werden. Im Mittelpunkt steht nicht das Medium, sondern die *Information*, für die es seitdem einen präzisen mathematischen Zugang gibt.
+* Die fundamentale Einheit ist das *Bit*; jede Nachricht, ob analog oder digital, lässt sich auf eine Folge von Nullen und Einsen reduzieren.
+* Die verschiedenen Übertragungsmedien unterliegen den gleichen fundamentalen Gesetzmäßigkeiten.
+
+Die zwei Fragestellungen, die Shannons Untersuchungen prägen:
+
+. *Wie viel Information enthält eine Nachricht?* Shannon führt die *Entropie* einer Datenquelle ein und erfasst damit den Informationsgehalt quantitativ. Haben die Symbolfolgen eines Senders statistische Strukturen, lässt sich die Anzahl der Bits berechnen, die zur Darstellung unbedingt benötigt wird – damit kann die Güte von Verfahren der Datenkompression beurteilt werden.
+. *Übertragung über rauschbehaftete Kanäle.* Nahezu alle realen Kanäle sind rauschbehaftet; ein Bit kann während der Übertragung seinen Wert ändern. Codierungen können Fehler erkennen oder korrigieren, aber keine ist perfekt: Die Wahrscheinlichkeit, dass ein Übertragungsfehler unerkannt bleibt, ist stets größer 0. Shannons Ergebnis dazu ist das *Kanalcodierungstheorem* (_Noisy-Channel Coding Theorem_, Abschnitt 7.5).
+
+Shannons Beweise sind an entscheidenden Stellen *nicht konstruktiv*: Sie zeigen wie ein Existenzbeweis, dass Codierungen mit bestimmten Eigenschaften existieren, nicht aber, wie sie aussehen oder zu berechnen sind. Daraus entstand der Wettlauf um Codierungen, die im Shannon’schen Sinne optimal sind.
+
+.Abbildungen 1.61 und 1.62: Meilensteine der Informationstheorie
+[cols="1,4,4,5,2",options="header"]
+|===
+|Jahr |Person |Ergebnis |Einordnung laut Basistext |Abschnitt
+
+|1948 |Claude Shannon |Informationstheorie |Entropie, Kanalcodierungstheorem |7.5
+|1949 |Robert M. Fano |Shannon-Fano-Codes |„Transmission of Information“; Datenkompression, nicht in jedem Fall optimal |4.4.2
+|1950 |Richard Hamming |Hamming-Codes |Fehlerkorrektur; bereits 1947 entwickelt, aus patentrechtlichen Gründen später publiziert |6.4.2
+|1952 |David A. Huffman |Huffman-Codierung |behebt den Mangel der Fano-Codierung; eines der wichtigsten Verfahren der Datenkompression |4.4.3
+|1954 |Irving S. Reed, David E. Muller |Reed-Muller-Codes |fehlerkorrigierende Codes |6.4.8
+|1955 |Peter Elias |Faltungscodes (_convolutional codes_) |wichtige Klasse fehlerkorrigierender Codes |6.5
+|1957 |Eugene Prange |CRC-Codes |zyklische Redundanzprüfung (_Cyclic Redundancy Check_); Fehlererkennung, z. B. in Netzwerken und Kraftfahrzeugen |6.4.3
+|1960 |Irving S. Reed, Gustave Solomon |Reed-Solomon-Codes |fehlerkorrigierend, beruhen auf algebraischen Eigenschaften von Polynomen; CD und DVD trotz Kratzern lesbar |6.4.5
+|1967 |Andrew Viterbi |Viterbi-Algorithmus |Fehlererkennung und -korrektur bei Faltungscodes mit geringem Rechenaufwand |6.5.1
+|1976 |Richard C. Pasco, Jorma J. Rissanen |Arithmetische Codierung |Datenkompression |4.5
+|1977 |Abraham Lempel, Jacob Ziv |LZ77-Kompression |Kompression mit dynamisch erzeugten Wörterbüchern |4.7.1
+|1978 |Abraham Lempel, Jacob Ziv |LZ78-Kompression |alternatives Verfahren |4.7.3
+|1984 |Terry Welch |LZW-Kompression |Weiterentwicklung von LZ78 |4.7.4
+|1993 |Claude Berrou, Alain Glavieux, Punya Thitimajshima |Turbo-Codes |Weiterentwicklung der Faltungscodes, sehr nahe am Shannon’schen Optimalitätslimit |–
+|1994 |Michael Burrows, David Wheeler |Burrows-Wheeler-Transformation |Vorverarbeitung für die Kompression |4.8
+|2009 |Jarosław Duda |ANS-Kompression (_Asymmetric Numeral Systems_) |Güte nahe der arithmetischen Codierung, kaum langsamer als die Huffman-Codierung |4.6
+|===
+
+[NOTE]
+====
+Zum Modul gehören von diesen Abschnitten nur die aus Kapitel 4 ohne 4.6 (Lektion 3) und aus Kapitel 6 bis einschließlich 6.4.5 (Lektion 4). Abschnitt 4.6, 6.4.8, 6.5 und Kapitel 7 liegen laut Leittext außerhalb des Pflichtstoffs.
+====

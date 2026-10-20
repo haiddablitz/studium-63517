@@ -1,0 +1,13 @@
+// Gemeinsame Stildefinition für alle Zusammenfassungen; einbinden mit include::../stil.adoc[]
+// .db = Bezeichner aus Datenbanken (Attribut- und Relationsnamen, Dreamstream), gesetzt wie im Lehrtext
+// .nk = Etikett "nicht klausurrelevant" für Abschnitte, die der Lehrtext als nicht prüfungsrelevant kennzeichnet
+
+++++
+<style>
+.db { font-family: "Open Sans", "DejaVu Sans", sans-serif; font-style: italic; }
+.nk { font-family: "Open Sans", "DejaVu Sans", sans-serif; font-size: .78em; font-weight: normal;
+      font-style: normal; color: #555; border: 1px solid #999; border-radius: 3px;
+      padding: 0 .4em; margin-left: .4em; vertical-align: middle; white-space: nowrap; }
+h2 .nk, h3 .nk, h4 .nk, h5 .nk { font-size: .6em; }
+</style>
+++++

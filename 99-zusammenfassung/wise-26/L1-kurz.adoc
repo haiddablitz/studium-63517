@@ -1,0 +1,243 @@
+= 63517 Informations- und Kodierungstheorie – L1: Geschichte der Nachrichtentechnik (Kurzfassung)
+:doctype: article
+:lang: de
+:toc: left
+:toc-title: Inhalt
+:toclevels: 2
+:imagesdir: images
+:figure-caption!:
+:table-caption!:
+:example-caption!:
+:note-caption: Hinweis
+:icons: font
+
+include::../stil.adoc[]
+
+Gekürzte Fassung von `L1-vollstaendig.adoc`. +
+Quelle: 63517 Informations- und Kodierungstheorie, Lektion 1 = Kapitel 1 des Basistexts (Hoffmann, Einführung in die Informations- und Codierungstheorie, 2. Auflage), Ausgabe WiSe 2026/27. Gliederung und Nummerierung entsprechen der Quelle. +
+Ausführlich sind nur die Codes der Telegrafen, der Morse-Code und Abschnitt 1.7; die geschichtlichen Abläufe (Strecken, Daten, Personen, Patentstreit) stehen in der vollständigen Fassung.
+
+== 1 Geschichte der Nachrichtentechnik
+
+.Überblick: Stationen der Nachrichtentechnik
+[cols="2,3,6,2",options="header"]
+|===
+|Zeit |Person |System oder Ereignis |Abschnitt
+
+|458 v. Chr. |Aischylos |Fackelpost im Drama _Agamemnon_: ein einziges, vorher verabredetes Ereignis |1.1.1
+|4. Jh. v. Chr. |Aineias Taktikos |Synchrontelegraf: Auswahl aus vorher festgelegten Nachrichten |1.1.2
+|2. Jh. v. Chr. |Polybios |Fackelcode: erster Zeichencode |1.1.3
+|1794 |Claude Chappe |Semaphoren-Telegraf Paris – Lille, 196 Figuren |1.2.1
+|1795 |John Gamble, Lord George Murray |Klappentelegrafen (Shutter-Telegrafen): Binärcodes |1.2.2
+|1800 |Alessandro Volta |Volta’sche Säule: kontinuierlicher Stromfluss |1.3
+|1809 |Samuel Thomas von Soemmerring |elektrolytischer Telegraf mit 35 Leitungen |1.3
+|1820 |Hans Christian Ørsted |Strom lenkt Magnetnadeln ab |1.3
+|– |Gauß und Weber |erster elektromagnetischer Telegraf, eigener Binärcode |1.3.1
+|1839 |Cooke und Wheatstone |Fünf-Nadel-Telegraf im Bahnbetrieb |1.3.1
+|1838–1844 |Morse, Vail, Gale |Morse-Telegraf und Morse-Code; Linie Washington – Baltimore |1.3.2
+|1866 |Cyrus W. Field |dauerhaft funktionierendes Transatlantikkabel |1.4
+|1876 |Bell (Gray, Meucci, Reis) |Telefon |1.5.1
+|1886 |Heinrich Hertz |Nachweis elektromagnetischer Wellen |1.5.2
+|1901 |Guglielmo Marconi |Funkübertragung über den Atlantik |1.5.2
+|1906 |Lee De Forest |Audion, Vorläufer der Triodenröhre |1.5.2
+|1946 / 1947 / 1958 |– |ENIAC / Transistor / integrierter Schaltkreis |1.6
+|1948 |Claude Shannon |„A mathematical theory of communication“: Informationstheorie |1.7
+|===
+
+=== 1.1 Von Fackeln und Feuern der Antike
+
+* *Fackelpost* (1.1.1): Eine vorher festgelegte Botschaft wird durch Signalfeuer über Relaisstationen weitergegeben. Schnell über große Distanzen, aber *keine differenzierten Nachrichten* – ein Feuer meldet nur das Eintreten eines einzigen, vorher verabredeten Ereignisses.
+* *Synchrontelegraf* des Aineias (1.1.2): zwei identische wassergefüllte Gefäße mit Schwimmer und Nachrichtenstab bei Sender und Empfänger. Beide öffnen und schließen den Ausfluss auf ein Lichtsignal des Senders gleichzeitig; die Botschaft wird am eingesunkenen Stab abgelesen. Die Nachricht steckt in der Zeitspanne zwischen den Lichtsignalen; übertragbar ist nur eine vorher festgelegte Auswahl von Nachrichten.
+* *Fackelcode des Polybios* (1.1.3): Nachrichten werden *buchstabenweise* codiert – der *erste Zeichencode*. 10 Fackeln, je 5 hinter zwei Sichtblenden: Die Anzahl der Fackeln über der linken Blende ist die *Spaltennummer*, die über der rechten die *Zeilennummer* in einer Buchstabentafel. Ohne Fernrohr nur über einige hundert Meter nutzbar.
+
+.Abbildung 1.5: Fackelcode des Polybios
+image::L1-abb-1-5-fackelcode-polybios.png[width=170]
+
+Im Bild: 2 Fackeln links, 5 Fackeln rechts – Spalte 2, Zeile 5, also κ.
+
+=== 1.2 Das mechanische Internet
+
+* *Semaphoren-Telegraf* von Claude Chappe (1.2.1; erste Linie Paris – Lille 1794, 210 km, 23 Relaisstationen): Mast mit einem *Regulator* (4 Stellungen) und an dessen Enden zwei *Indikatoren* (je 7 Winkelpositionen), unabhängig voneinander beweglich. Theoretisch 4 · 7 · 7 = 196 verschiedene Figuren. Jedes Zeichen ist eine geometrische Figur, kein Binärcode.
+* *Klappentelegrafen* (Shutter-Telegrafen, 1.2.2): Klappen mit zwei Positionen (sichtbar, nicht sichtbar) – Symbole werden im *Binärsystem* dargestellt, wie in modernen Computern.
+** Gamble, 5 Klappen: 32 Kombinationen, die mittleren Klappen aus der Ferne aber schlecht zu unterscheiden.
+** Gamble, 4 Klappen: besser sichtbar, aber nur 16 Kombinationen. Phonetisch verwandte Buchstaben teilen sich ein Codewort (B+P, D+T, E+I, K+C, S+C, V+U+W), weil Texte verständlich bleiben, wenn ein Buchstabe durch einen ähnlich klingenden ersetzt wird.
+** Murray, 6 Klappen in zwei Spalten: in der Praxis gebaut (ab 1795).
+
+.Abbildung 1.10: Optische Telegrafen nach den Entwürfen von John Gamble aus dem Jahr 1795
+image::L1-abb-1-10-gamble-telegrafen.png[width=360]
+
+=== 1.3 Elektrische Nachrichtenübertragung
+
+* Vorteile gegenüber optischen Netzen: rund um die Uhr und bei jedem Wetter verfügbar, weniger Relaisstationen, kostengünstiger und weniger fehleranfällig.
+* Voraussetzungen: *Volta’sche Säule* (1800, kontinuierlicher Strom); ab 1820 Elektromagnetismus (Ørsted, Ampère, Sturgeon, Ohm), mit dem sich Strom einfach sichtbar machen lässt.
+* Soemmerring-Telegraf (1809): 35 Leitungen, eine je Zeichen; Anzeige durch *Elektrolyse* (aufsteigende Bläschen) – für die Praxis zu langsam.
+
+==== 1.3.1 Nadeltelegrafen
+
+* Gauß und Weber: erster elektromagnetischer Telegraf. Zeichenweise Übertragung mit einem eigenen *Binärcode* aus linken und rechten Spiegelbewegungen; die Codewörter sind 1 bis 4 Bewegungen lang.
+* *Problem der langen Leitung*: Über größere Entfernungen gelang zunächst keine Übertragung. Lösung nach Joseph Henry (1829): mehrere kleine, in Reihe geschaltete Batterien statt einer großen.
+* *Five needle telegraph* von Cooke und Wheatstone (1839): Für ein Zeichen schlägt eine Nadel nach links und eine andere nach rechts aus; am Schnittpunkt der beiden Diagonalen steht das Zeichen. Genau 20 Zeichen codierbar – C, J, Q, U, X und Z fehlen. Später Zeigertelegraf mit einer Nadel: Codewörter sequenziell, dafür schneller und zuverlässiger.
+
+==== 1.3.2 Der Morse-Telegraf
+
+* Morses erster Entwurf übertrug nur die Ziffern 1 bis 5; die Zahlenfolgen wurden mit einem Codebuch in Klartext übersetzt. Alfred Vail ersetzte die Sendeeinrichtung durch einen Handschalter und verwarf das Codebuch: 1838 entstand der erste *Morse-Code*, der eine Nachricht buchstabenweise repräsentiert.
+* Der Empfänger hebt per Elektromagnet einen Stift an und erzeugt so *Punkte und Striche* auf einem Papierstreifen.
+* Erste Linie Washington – Baltimore, in Betrieb seit dem 24. Mai 1844.
+* *Amerikanischer Morse-Code*: aus einer Modifikation des Codes von 1838 hervorgegangen, 1844 verabschiedet, in den US-amerikanischen Netzen verwendet.
+* *Internationaler* (kontinentaler) *Morse-Code*: geringfügig modifiziert, 1851 in Berlin festgeschrieben, außerhalb der USA im Einsatz.
+
+[NOTE]
+====
+Der Basistext (S. 38) nennt für den amerikanischen Morse-Code einen „Code von 1938“ und das Jahr „1944“. Richtig sind 1838 und 1844: Die Errata des Autors führen diese Korrektur für die 1. Auflage (dort S. 39); in der 2. Auflage steht die Stelle unverändert.
+====
+
+.Abbildung 1.26: Der amerikanische und der internationale Morse-Code im Vergleich
+image::L1-abb-1-26-morse-codes.png[width=540]
+
+Der amerikanische Code verwendet neben Punkt und Strich auch Lücken innerhalb eines Zeichens (C, O, R, Y, Z) und Striche unterschiedlicher Länge (L, 0). Der internationale Code kommt mit Punkt und Strich aus.
+
+.Internationaler Morse-Code (aus Abbildung 1.26)
+[cols="1,2,1,2,1,2,1,2",options="header"]
+|===
+|Zeichen |Code |Zeichen |Code |Zeichen |Code |Zeichen |Code
+
+|A |· − |J |· − − − |S |· · · |1 |· − − − −
+|B |− · · · |K |− · − |T |− |2 |· · − − −
+|C |− · − · |L |· − · · |U |· · − |3 |· · · − −
+|D |− · · |M |− − |V |· · · − |4 |· · · · −
+|E |· |N |− · |W |· − − |5 |· · · · ·
+|F |· · − · |O |− − − |X |− · · − |6 |− · · · ·
+|G |− − · |P |· − − · |Y |− · − − |7 |− − · · ·
+|H |· · · · |Q |− − · − |Z |− − · · |8 |− − − · ·
+|I |· · |R |· − · | | |9 |− − − − ·
+| | | | | | |0 |− − − − −
+|===
+
+Die Codewörter sind unterschiedlich lang: E und T haben ein Signal, die übrigen Buchstaben zwei bis vier, die Ziffern fünf.
+
+[NOTE]
+====
+Nicht im Basistext, aber Gegenstand von Einsendeaufgabe 1-1 und der Übungsklausur (Aufgabe 5 a1): Ohne die Pause zwischen den Zeichen ist der Morse-Code nicht präfixfrei – E (·) ist z. B. Anfang von A (· −), I (· ·) und S (· · ·).
+====
+
+=== 1.4 Mission Transatlantik
+
+* Cyrus W. Field verlegte nach Fehlschlägen 1857, 1858 und 1865 im Jahr 1866 das erste dauerhaft funktionierende Transatlantikkabel; seit September 1866 verbanden zwei Leitungen die Kontinente.
+* Voraussetzungen: das *Telegrafenplateau* (Hochebene zwischen Neufundland und Irland) und *Guttapercha* als Isolator, der auch in kaltem Salzwasser haltbar ist.
+* Das Kabel von 1858 wurde zerstört, als man die schwächer werdenden Signale durch höhere Spannung retten wollte.
+
+=== 1.5 Von der Telegrafie zur Telefonie
+
+Effizientere Nutzung der Telegrafenleitungen:
+
+* *Typendrucktelegraf* (Hughes): Eingabe über eine Klaviatur, Ausgabe im Klartext – kein händisches Umsetzen in einen Binärcode mehr.
+* *Duplexbetrieb* (1872): gleichzeitiges Senden in beide Richtungen über dieselbe Leitung.
+* *Quadruplex-Telegraf* (Edison, 1874): vier Signale gleichzeitig. Je Richtung wird ein Signal über die Signalamplitude (*Amplitudenmodulation*) und das andere über den Phasenwinkel (*Phasenmodulation*) codiert.
+
+==== 1.5.1 Suche nach dem harmonischen Telegrafen
+
+* Der *harmonische Telegraf* sollte über *Frequenzmodulation* mehrere Morse-Datenströme parallel über eine Leitung übertragen. Aus dieser Suche ging das Telefon hervor.
+* Alexander Graham Bell erhielt 1876 das Patent; Elisha Gray reichte am selben Tag einen ähnlichen Antrag ein. Antonio Meucci und Philipp Reis hatten schon vorher Töne elektrisch übertragen.
+* Technischer Unterschied bei Reis: Die Membran öffnet und schließt einen Stromkreis, die Schallwellen werden also in ein *digitales* Signal übersetzt – nicht in ein *analoges* wie bei Bell und Gray. Töne waren erkennbar, das gesprochene Wort nicht.
+
+==== 1.5.2 Drahtlos durch den Äther
+
+* Maxwell sagte 1865 *elektromagnetische Wellen* theoretisch voraus, Hertz wies sie 1886 experimentell nach, Marconi übertrug 1901 ein Morse-Zeichen per Funk über den Atlantik.
+* *Triode* (Audion von Lee De Forest, 1906): Vakuumröhre mit Anode, Kathode und Gitter. Eine kleine Änderung der Gitterspannung bewirkt eine große Änderung des Kathoden-Anoden-Stroms – der erste *elektronische Verstärker*.
+
+=== 1.6 Von der Röhre zum Supercomputer
+
+Wird das Gitter einer Triode so geschaltet, dass der Strom entweder ungehindert oder gar nicht fließt, entsteht ein *digitales Schaltelement*. Die drei Technologiesprünge der Computertechnik:
+
+. *Triodenröhre* statt Relais: ENIAC (1946), von vielen als erster wirklicher Computer angesehen.
+. *Transistor* (1947, Shockley, Bardeen und Brattain).
+. *Integrierter Schaltkreis* (1958, Jack Kilby): mehrere Schaltelemente auf einem Stück Silizium; 1971 Intel 4004 als erster in Serie gefertigter Mikroprozessor.
+
+*Moore’sches Gesetz*: Die Anzahl der Transistoren auf einem Stück Silizium verdoppelt sich ca. alle 20 Monate.
+
+=== 1.7 Informations- und Codierungstheorie
+
+Zwei Entwicklungen der 30er- und 40er-Jahre verliefen zunächst unabhängig:
+
+* *Analoge Übertragungstechnik*: Wieder stellte sich das Problem der langen Leitung. Das Signal wird mit der Entfernung schwächer und muss regelmäßig verstärkt werden; jede Verstärkung des Nutzsignals erhöht aber zwangsläufig auch den Rauschanteil, die Signalqualität sinkt kontinuierlich. Bessere Bauelemente lindern das nur.
+* *Digitale Informationsverarbeitung*: An die Stelle kontinuierlicher Spannungspegel treten die zwei binären Zustände 0 und 1, die durch elementare Schaltoperationen verknüpft werden. Aus den drei Grundverknüpfungen Negation, Konjunktion (UND) und Disjunktion (ODER) lassen sich alle Hardwareschaltungen aufbauen.
+
+1948 gelang der Brückenschlag: Claude Shannon (1916–2001) veröffentlichte „A mathematical theory of communication“. Die Arbeit begründete die *Informationstheorie*, die theoretische Grundlage der gesamten modernen Datenübertragungs- und Speichertechnik. Shannon betrachtete die Datenübertragung abstrakt; seine Ergebnisse gelten deshalb für alle Arten der Nachrichtenübertragung.
+
+.Abbildung 1.59: Das Shannon’sche Kommunikationsmodell aus dem Jahr 1948
+image::L1-abb-1-59-kommunikationsmodell.png[width=560]
+
+Die fünf Komponenten des Kommunikationsmodells und die Störquelle:
+
+. *Kommunikationsquelle* (_information source_): wählt eine von mehreren möglichen Nachrichten aus und übergibt sie an den Sender.
+. *Sender* (_transmitter_): wandelt die Nachricht in ein Signal.
+. *Übertragungskanal* (_communication channel_): transportiert das Signal.
+. *Empfänger* (_receiver_): wandelt das Signal zurück in eine Nachricht.
+. *Informationssenke* (_destination_): nimmt die Nachricht entgegen.
+
+Die *Störquelle* (_noise source_) in der Mitte der Übertragungsstrecke modelliert alle Einflüsse, die das gesendete Signal verfälschen können.
+
+.Die drei Anwendungsszenarien aus Abbildung 1.60
+[cols="2,3,3,3,3",options="header"]
+|===
+|Szenario |Quelle und Senke |Sender und Empfänger |Kanal |Störquelle
+
+|Telegrafie
+|Absender und Adressat (geschriebener Text)
+|Morse-Telegraf: übersetzt Text in Morse-Codewörter und zurück
+|Telegrafenleitung
+|Leitungsstörung
+
+|Telefonie
+|Sprach- und Hörorgan
+|Telefon: setzt Schallwellen in elektrische Signale um und zurück
+|Telefonleitung
+|Leitungsstörung
+
+|Datenspeicherung
+|PC
+|CD-Brenner und CD-Leser
+|CD – kein räumlicher Transport, sondern ein Datenträger, der die Signale über die Zeit persistiert
+|Fingerabdruck
+|===
+
+Das grundlegend Neue an Shannons Theorie:
+
+* Eine übertragene Nachricht kann unabhängig von ihrem Kommunikationsmedium betrachtet werden. Im Mittelpunkt steht nicht das Medium, sondern die *Information*, für die es seitdem einen präzisen mathematischen Zugang gibt.
+* Die fundamentale Einheit ist das *Bit*; jede Nachricht, ob analog oder digital, lässt sich auf eine Folge von Nullen und Einsen reduzieren.
+* Die verschiedenen Übertragungsmedien unterliegen den gleichen fundamentalen Gesetzmäßigkeiten.
+
+Die zwei Fragestellungen, die Shannons Untersuchungen prägen:
+
+. *Wie viel Information enthält eine Nachricht?* Shannon führt die *Entropie* einer Datenquelle ein und erfasst damit den Informationsgehalt quantitativ. Haben die Symbolfolgen eines Senders statistische Strukturen, lässt sich die Anzahl der Bits berechnen, die zur Darstellung unbedingt benötigt wird – damit kann die Güte von Verfahren der Datenkompression beurteilt werden.
+. *Übertragung über rauschbehaftete Kanäle.* Nahezu alle realen Kanäle sind rauschbehaftet; ein Bit kann während der Übertragung seinen Wert ändern. Codierungen können Fehler erkennen oder korrigieren, aber keine ist perfekt: Die Wahrscheinlichkeit, dass ein Übertragungsfehler unerkannt bleibt, ist stets größer 0. Shannons Ergebnis dazu ist das *Kanalcodierungstheorem* (_Noisy-Channel Coding Theorem_, Abschnitt 7.5).
+
+Shannons Beweise sind an entscheidenden Stellen *nicht konstruktiv*: Sie zeigen wie ein Existenzbeweis, dass Codierungen mit bestimmten Eigenschaften existieren, nicht aber, wie sie aussehen oder zu berechnen sind. Daraus entstand der Wettlauf um Codierungen, die im Shannon’schen Sinne optimal sind.
+
+.Abbildungen 1.61 und 1.62: Meilensteine der Informationstheorie
+[cols="1,4,4,5,2",options="header"]
+|===
+|Jahr |Person |Ergebnis |Einordnung laut Basistext |Abschnitt
+
+|1948 |Claude Shannon |Informationstheorie |Entropie, Kanalcodierungstheorem |7.5
+|1949 |Robert M. Fano |Shannon-Fano-Codes |„Transmission of Information“; Datenkompression, nicht in jedem Fall optimal |4.4.2
+|1950 |Richard Hamming |Hamming-Codes |Fehlerkorrektur; bereits 1947 entwickelt, aus patentrechtlichen Gründen später publiziert |6.4.2
+|1952 |David A. Huffman |Huffman-Codierung |behebt den Mangel der Fano-Codierung; eines der wichtigsten Verfahren der Datenkompression |4.4.3
+|1954 |Irving S. Reed, David E. Muller |Reed-Muller-Codes |fehlerkorrigierende Codes |6.4.8
+|1955 |Peter Elias |Faltungscodes (_convolutional codes_) |wichtige Klasse fehlerkorrigierender Codes |6.5
+|1957 |Eugene Prange |CRC-Codes |zyklische Redundanzprüfung (_Cyclic Redundancy Check_); Fehlererkennung, z. B. in Netzwerken und Kraftfahrzeugen |6.4.3
+|1960 |Irving S. Reed, Gustave Solomon |Reed-Solomon-Codes |fehlerkorrigierend, beruhen auf algebraischen Eigenschaften von Polynomen; CD und DVD trotz Kratzern lesbar |6.4.5
+|1967 |Andrew Viterbi |Viterbi-Algorithmus |Fehlererkennung und -korrektur bei Faltungscodes mit geringem Rechenaufwand |6.5.1
+|1976 |Richard C. Pasco, Jorma J. Rissanen |Arithmetische Codierung |Datenkompression |4.5
+|1977 |Abraham Lempel, Jacob Ziv |LZ77-Kompression |Kompression mit dynamisch erzeugten Wörterbüchern |4.7.1
+|1978 |Abraham Lempel, Jacob Ziv |LZ78-Kompression |alternatives Verfahren |4.7.3
+|1984 |Terry Welch |LZW-Kompression |Weiterentwicklung von LZ78 |4.7.4
+|1993 |Claude Berrou, Alain Glavieux, Punya Thitimajshima |Turbo-Codes |Weiterentwicklung der Faltungscodes, sehr nahe am Shannon’schen Optimalitätslimit |–
+|1994 |Michael Burrows, David Wheeler |Burrows-Wheeler-Transformation |Vorverarbeitung für die Kompression |4.8
+|2009 |Jarosław Duda |ANS-Kompression (_Asymmetric Numeral Systems_) |Güte nahe der arithmetischen Codierung, kaum langsamer als die Huffman-Codierung |4.6
+|===
+
+[NOTE]
+====
+Zum Modul gehören von diesen Abschnitten nur die aus Kapitel 4 ohne 4.6 (Lektion 3) und aus Kapitel 6 bis einschließlich 6.4.5 (Lektion 4). Abschnitt 4.6, 6.4.8, 6.5 und Kapitel 7 liegen laut Leittext außerhalb des Pflichtstoffs.
+====
