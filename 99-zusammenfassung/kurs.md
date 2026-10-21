@@ -44,10 +44,11 @@ Eingrenzung nur über die Lesehinweise des Leittexts; das Buch selbst kennzeichn
 ## Auszeichnungen
 
 - Begriffe, die das Buch bei der Einführung kursiv setzt, bei ihrer Einführung fett.
-- Definitionen und Sätze des Buchs (im Buch durch Symbole gekennzeichnet, siehe Symbolwegweiser) wörtlich als Beispielblock mit Titel `.Definition x.y (Titel)` bzw. `.Satz x.y (Titel)`.
+- Definitionen und Sätze des Buchs (im Buch durch Symbole gekennzeichnet, siehe Symbolwegweiser) wörtlich als Beispielblock mit Titel `.Definition x.y (Titel)` bzw. `.Satz x.y (Titel)` und Rolle `[.definition]` (hellblauer Kasten wie im Buch).
+- Durchgerechnete Beispiele des Buchs als Beispielblock mit Titel `.Beispiel: …` und Rolle `[.beispiel]` (hellgrüner Kasten).
 - Abbildungen und Tabellen heißen `Abbildung x.y` / `Tabelle x.y` wie im Buch (dort abgekürzt „Abb.“).
 - Codewörter und Bitfolgen als `` `0110` ``.
-- Keine zusätzlichen Stile in `stil.adoc`.
+- Zusätzliche Stile in `stil.adoc`: `.definition` für Definitions- und Satzkästen, `.beispiel` für Beispielkästen.
 
 ## Prüfung
 
@@ -59,10 +60,15 @@ Eingrenzung nur über die Lesehinweise des Leittexts; das Buch selbst kennzeichn
 
 ## Referenzbeispiel
 
-Noch keines. `wise-26/L1-vollstaendig.adoc` ist ausdrücklich **keine** Referenz: Kapitel 1 ist rein geschichtlich, ohne Definitionen und Formeln, und deutlich stärker verdichtet als der Richtwert des Skills. Probelauf und Referenz wird die erste abgenommene Lektion mit Definitionen und Formeln (voraussichtlich L2).
+`wise-26/L2-vollstaendig.adoc` (Kapitel 3, vollständig abgenommen am 21.10.2026). Daran orientieren: Gliederung, Definitions- und Beispielkästen, Formeln, nachgebaute Tabellen und als Bild übernommene mehrspaltige Abbildungen, `[NOTE]`-Blöcke für Abweichungen vom Buch.
+
+`wise-26/L1-vollstaendig.adoc` ist ausdrücklich **keine** Referenz: Kapitel 1 ist rein geschichtlich, ohne Definitionen und Formeln, und deutlich stärker verdichtet als der Richtwert des Skills.
 
 Zu L1 gibt es zusätzlich `wise-26/L1-kurz.adoc`: eine aus der vollständigen Fassung abgeleitete Kurzfassung (Codes der Telegrafen, Morse-Code und 1.7 ausführlich, Geschichte nur in Stichpunkten). Die Abschnitte 1.3.2 (Morse-Codes, Errata-Hinweis) und 1.7 sind dort wörtlich übernommen – Korrekturen an diesen Stellen in beiden Dateien nachziehen.
 
 ## Regeln aus Korrekturen
 
-Noch keine.
+- Definitionen und Sätze farblich vom Beispielblock abheben (`[.definition]`), da sie sonst wie durchgerechnete Beispiele aussehen.
+- Abbildungen stehen untereinander mit dem Text, nicht daneben (`float` an `image::`). Ein Versuch in 3.2 sah im PDF nicht gut aus: Hohe Bilder rutschen auf die nächste Seite und lassen Leerraum zurück.
+- Beispiele grün hervorheben (`[.beispiel]`), analog zu den Definitionskästen.
+- Mehrspaltige Abbildungen (über die Satzspiegelbreite, mehrere Spalten nebeneinander) generell als Bild aus dem Buch übernehmen, nicht nachbauen – in L2 Abb. 3.18, 3.24, 3.27, 3.29, 3.30. Einspaltige Abbildungen in der Randspalte, die nur aus Tabellen bestehen (Abb. 3.16, 3.20), und Tabellen des Buchs („Tab.“) werden weiter nachgebaut.

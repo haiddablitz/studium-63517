@@ -1,6 +1,8 @@
 // Gemeinsame Stildefinition für alle Zusammenfassungen; einbinden mit include::../stil.adoc[]
 // .db = Bezeichner aus Datenbanken (Attribut- und Relationsnamen, Dreamstream), gesetzt wie im Lehrtext
 // .nk = Etikett "nicht klausurrelevant" für Abschnitte, die der Lehrtext als nicht prüfungsrelevant kennzeichnet
+// .definition = hellblauer Kasten für Definitionen und Sätze (Rolle am Beispielblock: [.definition])
+// .beispiel = hellgrüner Kasten für durchgerechnete Beispiele (Rolle am Beispielblock: [.beispiel])
 
 ++++
 <style>
@@ -9,5 +11,11 @@
       font-style: normal; color: #555; border: 1px solid #999; border-radius: 3px;
       padding: 0 .4em; margin-left: .4em; vertical-align: middle; white-space: nowrap; }
 h2 .nk, h3 .nk, h4 .nk, h5 .nk { font-size: .6em; }
+.exampleblock.definition > .content { background: #e6f2fa !important; border: 1px solid #0a9ad6;
+      border-left: 5px solid #0a9ad6; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.exampleblock.definition > .title { color: #0a7ab0; font-style: normal; font-weight: 600; }
+.exampleblock.beispiel > .content { background: #e9f6ec !important; border: 1px solid #2e9d4f;
+      border-left: 5px solid #2e9d4f; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.exampleblock.beispiel > .title { color: #237a3b; font-style: normal; font-weight: 600; }
 </style>
 ++++
